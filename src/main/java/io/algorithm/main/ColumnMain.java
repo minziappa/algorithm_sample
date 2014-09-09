@@ -47,6 +47,7 @@ public class ColumnMain {
 
         StringBuffer sb = new StringBuffer();
 
+        // Have to make average in Here???
         for(int m=0; m < lenRow; m++) {
     		for(int n=0; n < table.length; n++) {
     			sb.append(table[n][m]).append(" ");
