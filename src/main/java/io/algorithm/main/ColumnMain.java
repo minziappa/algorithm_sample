@@ -1,48 +1,61 @@
 package io.algorithm.main;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.BufferedInputStream;
+import java.util.Scanner;
 
 public class ColumnMain {
 
 	/**
-	 * 
-	 * 
 	 * @param args
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
 
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        String entrada = "";
+        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        String [][] table = null;
+        int cntRow=0;
+        int lenColumn = 0;
+        int lenRow = 2;
+        while (stdin.hasNext()) {
 
-        int i=0;
-        int len = 0;
-    	String [][] table = null;
-        while((entrada = br.readLine()) != null) {
-        	String[] colume = entrada.split(",");
+        	String strLine = stdin.nextLine().trim();
+        	if(strLine.trim().equals(".")) {
+        		break;
+        	}
 
-        	if(i==0) {
-        		len = colume.length;
-            	table = new String[len][len];
+            String[] rowData = strLine.split(",");
+
+        	if(cntRow==0) {
+
+        		lenColumn = rowData.length;
+            	table = new String[lenColumn][lenRow];
+        		for(int i=0; i <lenColumn; i++) {
+            		table[i][0] = rowData[i];
+        		}
+        		for(int k=0; k <lenColumn; k++) {
+            		table[k][1] = "0";
+        		}
+
         	} else {
-        		for(int k=0; k <len; k++) {
-            		table[i][k] = colume[k];
+        		for(int i=0; i < lenColumn; i++) {
+            		table[i][1] = String.valueOf((Integer.valueOf(table[i][1]) + Integer.valueOf(rowData[i])));
         		}
         	}
 
-    		i++;
-            //System.out.println("column => " + word);
+    		cntRow++;
         }
 
-        for(int m=0; m < table.length; m++) {
-    		for(int n=0; n < table[0].length; n++) {
-        		System.out.println(table[m][n]);
+        StringBuffer sb = new StringBuffer();
+
+        for(int m=0; m < lenRow; m++) {
+    		for(int n=0; n < table.length; n++) {
+    			sb.append(table[n][m]).append(" ");
     		}
+    		sb.append("\n");
         }
+		System.out.print(sb.toString());
 
-        System.out.println();
+		stdin.close();
 	}
 
 }
