@@ -9,12 +9,20 @@ public class DefautMain {
 		
 		char[] chs = s.toCharArray();
 		char temp = 0;
-
-		for(char ch : chs) {
-			temp = chs[chs.length-1];
-			System.out.println(temp);
+		
+		for(int i=0; i < chs.length/2; i++) {
+			temp = chs[i];
+			chs[i] = chs[(chs.length-1) - i];
+			chs[(chs.length-1) - i] = temp;
 		}
 
+//		for(char ch : chs) {
+//			temp = chs[chs.length-1];
+//			chs[chs.length-1] = chs[ch];
+//			chs[ch] = temp;
+//		}
+
+		System.out.println(chs);
 	}
 
 }
