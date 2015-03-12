@@ -1,5 +1,7 @@
 package io.algorithm.search;
 
+import io.algorithm.sort.QuickSort;
+
 import java.util.Arrays;
 import java.util.Random;
 

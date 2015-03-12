@@ -1,4 +1,4 @@
-package io.algorithm.search;
+package io.algorithm.sort;
 
 public class QuickSort {
 	private int[] numbers;

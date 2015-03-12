@@ -18,10 +18,9 @@ public class ResizeImageMain {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		
+
 		try{
-			 
+
 			BufferedImage originalImage = ImageIO.read(new File("c:\\image\\mkyong.jpg"));
 			int type = originalImage.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
 	 
