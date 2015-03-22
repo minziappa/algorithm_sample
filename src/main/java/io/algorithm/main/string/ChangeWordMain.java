@@ -1,4 +1,4 @@
-package io.algorithm.main;
+package io.algorithm.main.string;
 
 public class ChangeWordMain {
 

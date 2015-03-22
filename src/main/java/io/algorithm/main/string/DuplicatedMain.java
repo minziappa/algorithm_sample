@@ -1,4 +1,4 @@
-package io.algorithm.main;
+package io.algorithm.main.string;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,7 +25,31 @@ public class DuplicatedMain {
 
 		String[] strArray = data.split(",");
 
-		System.out.println(removeDuplicatedString2(strArray));
+		// System.out.println(removeDuplicatedString2(strArray));
+
+		test(strArray);
+		
+	}
+
+	public static void test(String[] strArray) {
+		
+		String duplicatedString = "";
+		
+		for(int i=0; i < strArray.length; i++) {
+			for(int k=0; k < strArray.length; k++) {
+				if(i==k) {
+					continue;
+				}
+				if(!duplicatedString.contains(strArray[i]) && strArray[i].equals(strArray[k])) {
+					duplicatedString = duplicatedString + strArray[i];
+					System.out.println("i >> " + strArray[i]);
+					System.out.println("k >> " + strArray[k]);
+					System.out.println(" ================== ");
+				}
+			}
+		}
+		
+		System.out.println(duplicatedString);
 
 	}
 
