@@ -9,6 +9,7 @@ public class MergeSortMain {
 		System.out.println(mergeSort(intArray));
 	}
 
+	// http://www.mycstutorials.com/articles/sorting/mergesort
 	public static int[] mergeSort(int array[])
 	// pre: array is full, all elements are valid integers (not null)
 	// post: array is sorted in ascending order (lowest to highest)
