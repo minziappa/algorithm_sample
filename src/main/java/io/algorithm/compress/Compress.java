@@ -36,19 +36,23 @@ public class Compress {
 	private int countCompression(String str) {
 		if (str == null || str.isEmpty()) return 0;
 		char last = str.charAt(0);
+		System.out.println("last >> 0 >> " + last);
 		int size = 0;
 		int count = 1;
+
 		for (int i = 1; i < str.length(); i++) {
 			if(str.charAt(i) == last) {
 				count++;
 			} else {
 				last = str.charAt(i);
 				size += 1 + String.valueOf(count).length();
+				System.out.println("count >> 1 >> " + count);
+				System.out.println("size >> 2 >> " + size);
 				count = 1;
 			}
 		}
 		size += 1 + String.valueOf(count).length();
-		System.out.println("size >> " + size);
+		System.out.println("size >> 3 >> " + size);
 		return size;
 	}
 
