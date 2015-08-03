@@ -4,7 +4,7 @@ public class Rotate {
 
 	public void arrayRotate(int[][] matrix, int n) {
 		for (int layer = 0; layer < n/2; ++layer) {
-			System.out.println("11");
+
 			int first = layer;
 			int last = n - 1 - layer;
 
@@ -28,5 +28,5 @@ public class Rotate {
 		}
 
 	}
-	
+
 }
