@@ -12,13 +12,22 @@ public class FibonacciMain {
 		int b = 1;
 		System.out.println(a);
 		System.out.println(b);
-		for(int i=0; i < 10; i++) {
+		for(int i=0; i < 8; i++) {
 			int sum = a + b;
 			System.out.println(sum);
 			a = b;
 			b = sum;
 		}
 
+	}
+
+	public static int sumFibonacci(int num) {
+		int intSum = 0;
+		
+		intSum = num + num+1;
+		
+		
+		return 1;
 	}
 
 }

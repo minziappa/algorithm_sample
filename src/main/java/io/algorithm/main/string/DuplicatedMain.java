@@ -82,6 +82,7 @@ public class DuplicatedMain {
 
 	}
 
+	/* Best */
 	public static List<String> removeDuplicatedString3(String[] strArray) {
 		List<String> result = new ArrayList<String>();
 		for (String item : strArray) {

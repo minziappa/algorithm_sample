@@ -9,14 +9,14 @@ public class FactorialMain {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		System.out.println(getFactorial4(3));
+		System.out.println(getFactorial4(5));
 	}
 
 	public static int getFactorial4(int num) {
 		if(num == 1) {
 			return num;
 		} else {
-			return num*getFactorial4(num - 1);
+			return num * getFactorial4(num - 1);
 		}
 	}
 

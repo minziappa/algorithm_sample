@@ -41,6 +41,7 @@ public class UniqueStringMain {
 				if(i==k) {
 					continue;
 				}
+				
 				if(!duplicatedString.contains(strArray[i]) && strArray[i].equals(strArray[k])) {
 					duplicatedString = duplicatedString + strArray[i];
 					System.out.println("i >> " + strArray[i]);
